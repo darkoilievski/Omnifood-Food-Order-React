@@ -45,3 +45,13 @@
     height: 1rem;
   }
 }
+
+@media (max-width: 350px) {
+  .omnifood {
+    height: 0.8rem;
+  }
+
+  .header {
+    gap: 0.5rem;
+  }
+}

@@ -1,7 +1,8 @@
 .input {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .input label {
@@ -11,8 +12,9 @@
 
 .input input {
   width: 3rem;
-  border-radius: 5px;
+  height: 1.3rem;
+  border-radius: 10px;
   border: 1px solid #ccc;
   font: inherit;
-  padding-left: 0.5rem;
+  padding-left: 0.8rem;
 }

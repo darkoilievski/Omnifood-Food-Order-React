@@ -2,35 +2,39 @@ import React from "react";
 import Card from "../UI/Card";
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem/MealItem";
+import chicken from "../../assets/chicken.jpg";
+import lentil from "../../assets/lentil.jpg";
+import quinoa from "../../assets/quinoa.jpg";
+import salad from "../../assets/green-salad.jpg";
 
 const DUMMY_MEALS = [
   {
     id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
+    name: "Curry Chicken",
     price: 22.99,
+    image: chicken,
   },
   {
     id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.5,
+    name: "Lentil Soup",
+    price: 16.99,
+    image: lentil,
   },
   {
     id: "m3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
+    name: "Quinoa",
     price: 12.99,
+    image: quinoa,
   },
   {
     id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
+    name: "Green Salad",
     price: 18.99,
+    image: salad,
   },
 ];
 
-const AvailableMeals = () => {
+const AvailableMeals = (props) => {
   const mealsList = DUMMY_MEALS.map((meal) => (
     <MealItem
       id={meal.id}
@@ -38,14 +42,15 @@ const AvailableMeals = () => {
       name={meal.name}
       description={meal.description}
       price={meal.price}
+      image={meal.image}
     />
   ));
 
   return (
     <section className={classes.meals}>
-      <Card>
-        <ul>{mealsList}</ul>
-      </Card>
+      {mealsList.map((meal) => {
+        return <Card key={meal.key}>{meal}</Card>;
+      })}
     </section>
   );
 };

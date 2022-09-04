@@ -84,3 +84,26 @@
     padding: 0.3rem 1.5rem;
   }
 }
+
+@media (max-width: 432px) {
+  .icon {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.2rem;
+  }
+  .button {
+    font-size: 0.4rem;
+    padding: 0.3rem 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .icon {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+  .button {
+    font-size: 0.4rem;
+    padding: 0.3rem 1.5rem;
+  }
+}

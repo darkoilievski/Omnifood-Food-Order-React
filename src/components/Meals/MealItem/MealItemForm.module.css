@@ -1,5 +1,5 @@
 .form {
-  text-align: right;
+  text-align: center;
 }
 
 .form button {
@@ -16,5 +16,4 @@
 .form button:hover,
 .form button:active {
   background-color: #ad5502;
-  border-color: #ad5502;
 }
